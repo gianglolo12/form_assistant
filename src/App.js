@@ -15,7 +15,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    const socket = new WebSocket(`ws://${process.env.REACT_APP_SEVER_HOST}`);
+    const socket = new WebSocket(`wss://${process.env.REACT_APP_SEVER_HOST}`);
 
     socket.onopen = () => {
       console.log('WS connected');
